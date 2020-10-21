@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function AddPeople(props) {
+const AddPeople = (props) => {
   const [inputFirstName, setInputFirstName] = useState('');
   const [inputLastName, setInputLastName] = useState('');
 
@@ -21,27 +21,28 @@ function AddPeople(props) {
     setInputFirstName('');
     setInputLastName('');
   };
+
   return (
-    <div className="add-form">
-      <form onSubmit={handleSubmit}>
+    <div className="add-form" onSubmit={handleSubmit}>
+      <form>
         <input
-          name="text"
+          name="firstName"
           value={inputFirstName}
           onChange={handleChangeFirstName}
           placeholder="First Name"
           className="add-input"
         ></input>
         <input
-          name="text"
+          name="lastName"
           value={inputLastName}
           placeholder="Last Name"
           onChange={handleChangeLastName}
           className="add-input"
         ></input>
-        <button onClick={handleSubmit}>Add</button>
+        <button onSubmit={handleSubmit}>Add</button>
       </form>
     </div>
   );
-}
+};
 
 export default AddPeople;
