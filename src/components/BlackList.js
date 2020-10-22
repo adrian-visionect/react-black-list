@@ -13,10 +13,23 @@ const BlackList = () => {
     setLists(newLists);
     console.log(list, ...lists);
   };
+
+  const blItems = lists.map((item, index) => {
+    return (
+      <li key={index}>
+        <a className={item.cName} href={item.url}>
+          {item.id}
+          {item.firstName}
+          {item.lastName}
+        </a>
+      </li>
+    );
+  });
   return (
     <div className="">
       <h1>Add to blacklist</h1>
       <AddPeople onSubmit={addToList} />
+      <div className="people-list">{blItems}</div>
     </div>
   );
 };

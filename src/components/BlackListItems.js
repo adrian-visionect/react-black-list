@@ -7,7 +7,12 @@ const BlackListItems = () => {
       return;
     }
   };
-  return <div className="app-container"></div>;
+  return (
+    <div className="app-container">
+      <h2>dsad</h2>
+      <div>{props.lists}</div>
+    </div>
+  );
 };
 
 export default BlackListItems;
