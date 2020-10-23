@@ -39,7 +39,9 @@ const AddPeople = (props) => {
           onChange={handleChangeLastName}
           className="add-input"
         ></input>
-        <button onSubmit={handleSubmit}>Add</button>
+        <button onSubmit={handleSubmit} className="form-button">
+          Add
+        </button>
       </form>
     </div>
   );

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import AddPeople from './AddPeople';
 import '../../src/components/BlackList.css';
+
 const BlackList = () => {
   const [lists, setLists] = useState([]);
 
