@@ -18,11 +18,15 @@ const BlackList = () => {
   const blItems = lists.map((item, index) => {
     return (
       <li key={index}>
-        <p className={item.cName} href="#">
-          {item.id}
+        <p className="user-info">
+          First Name: <span>{item.firstName}</span>
         </p>
-        <p>{item.firstName}</p>
-        <p>{item.lastName}</p>
+        <p className="user-info">
+          Last Name: <span>{item.lastName}</span>
+        </p>
+        <p className="user-info">
+          Blacklist ID: <span>{item.id}</span>
+        </p>
       </li>
     );
   });
@@ -34,6 +38,7 @@ const BlackList = () => {
       <AddPeople onSubmit={addToList} />
       <div className="blacklist-container">
         <div className="people-list">{blItems}</div>
+        <div className="no-entry">NO ENTRY!</div>
       </div>
     </div>
   );
