@@ -15,19 +15,30 @@ const BlackList = () => {
     console.log(list, ...lists);
   };
 
+  const removeTodo = (id) => {
+    const removeArr = [...lists].filter((item) => item.id !== id);
+
+    setLists(removeArr);
+  };
+
   const blItems = lists.map((item, index) => {
     return (
-      <li key={index}>
-        <p className="user-info">
-          First Name: <span>{item.firstName}</span>
-        </p>
-        <p className="user-info">
-          Last Name: <span>{item.lastName}</span>
-        </p>
-        <p className="user-info">
-          Blacklist ID: <span>{item.id}</span>
-        </p>
-      </li>
+      <div className="users">
+        <li key={index}>
+          <p className="user-info">
+            First Name: <span>{item.firstName}</span>
+          </p>
+          <p className="user-info">
+            Last Name: <span>{item.lastName}</span>
+          </p>
+          <p className="user-info">
+            Blacklist ID: <span>{item.id}</span>
+          </p>
+        </li>
+        <div className="user-remove" onClick={() => removeTodo(item.id)}>
+          Remove to blacklist
+        </div>
+      </div>
     );
   });
   return (
