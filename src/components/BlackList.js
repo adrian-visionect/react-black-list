@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import AddPeople from './AddPeople';
 import '../../src/components/BlackList.css';
+import BannedList from './BannedList';
 
-const BlackList = () => {
+const BlackList = (props) => {
   const [lists, setLists] = useState([]);
 
   const addToList = (list) => {
@@ -36,7 +37,7 @@ const BlackList = () => {
           </p>
         </li>
         <div className="user-remove" onClick={() => removeTodo(item.id)}>
-          Remove to blacklist
+          Remove
         </div>
       </div>
     );
@@ -50,6 +51,7 @@ const BlackList = () => {
       <div className="blacklist-container">
         <div className="people-list">{blItems}</div>
         <div className="no-entry">NO ENTRY!</div>
+        <BannedList />
       </div>
     </div>
   );
