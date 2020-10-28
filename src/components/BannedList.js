@@ -32,7 +32,7 @@ const BannedList = (props) => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            width: '50%',
+            width: '70%',
             height: '80%',
           },
         }}

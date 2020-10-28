@@ -168,4 +168,72 @@ body {
   .blacklist h1 {
     text-align: center;
   }
+  .form-button {
+    margin-left: 100px;
+  }
+}
+
+@media (min-width: 500px) {
+  .blacklist-container {
+    width: 90%;
+    margin-top: 1100px;
+    margin-bottom: 30px;
+  }
+  .no-entry {
+    display: none;
+  }
+
+  .blacklist h1 {
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .blacklist-container {
+    width: 80%;
+    margin-top: 900px;
+    margin-bottom: 30px;
+  }
+  .no-entry {
+    display: block;
+    font-size: 30px;
+    top: 10%;
+    right: 5%;
+  }
+
+  .blacklist h1 {
+    text-align: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .blacklist-container {
+    width: 70%;
+    margin-bottom: 30px;
+  }
+  .no-entry {
+    font-size: 30px;
+    top: 10%;
+    right: 5%;
+  }
+
+  .blacklist h1 {
+    text-align: center;
+  }
+
+  @media (min-width: 1200px) {
+    .blacklist-container {
+      width: 55%;
+      margin-bottom: 30px;
+    }
+    .no-entry {
+      font-size: 40px;
+      top: 15%;
+      right: 0;
+    }
+
+    .blacklist h1 {
+      text-align: center;
+    }
+  }
 }
